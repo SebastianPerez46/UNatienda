@@ -29,9 +29,13 @@ Debido a que JavaFX es un módulo externo en las versiones recientes de Java, es
 | Requisito | Versión Mínima | 
 ______________________________
 | JDK (Java Development Kit)** | 21 | 
+
 | Apache Maven | 3.6 | 
+
 | JavaFX SDK | 21 |
+
 | IDE | Apache NetBeans 12+ |
+
 
 ##  Configuración e Instalación
 
@@ -57,7 +61,8 @@ Descarga el código fuente e importalo a netbeans como zip, o también se puede 
 5.  Dale ok y el programa se ejecutará.
 
 
-Guía de Uso Rápida
+Guía de Uso Rápida: 
+
 Ejecuta la Aplicación y elige entre Administrador o Cliente.
 
 Flujo de Administrador
