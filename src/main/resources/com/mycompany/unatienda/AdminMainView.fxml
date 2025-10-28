@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<BorderPane prefHeight="700.0" prefWidth="1000.0" styleClass="root"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.mycompany.unatienda.AdminMainController">
+
+    <!-- TOP: Encabezado -->
+    <top>
+        <HBox alignment="CENTER_LEFT" prefHeight="70.0" style="-fx-background-color: #333333; -fx-border-color: #FFA07A; -fx-border-width: 0 0 2 0;">
+             <children>
+                <Label styleClass="label-header" text="UNatienda | Panel Admin" HBox.hgrow="ALWAYS">
+                    <padding>
+                        <Insets left="20.0" />
+                    </padding>
+                </Label>
+                <Button onAction="#handleLogout" styleClass="button-warning" text="Cerrar Sesión">
+                    <HBox.margin>
+                        <Insets right="20.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+        </HBox>
+    </top>
+
+    <center>
+        <TabPane fx:id="mainTabPane" side="TOP" styleClass="tab-pane-neon" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Gestión de Productos">
+                    <content>
+                        <ScrollPane fitToWidth="true" hbarPolicy="NEVER" style="-fx-background-color: transparent;">
+                           <content>
+                              <AnchorPane>
+                                 <children>
+                                      <VBox spacing="20.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                         <children>
+                                              <fx:include source="AddProductView.fxml" />
+                                              <Label styleClass="label-header" text="Menú Actual">
+                                                 <VBox.margin>
+                                                    <Insets top="20.0" />
+                                                 </VBox.margin>
+                                              </Label>
+                                              <fx:include source="AdminProductTableView.fxml" />
+                                          </children>
+                                      </VBox>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </ScrollPane>
+                    </content>
+                </Tab>
+
+                <Tab text="Gestión de Pedidos">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0">
+                             <children>
+                                <fx:include source="AdminOrderManagementView.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+
+                <Tab text="Historial de Ventas">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0">
+                             <children>
+                                <fx:include source="AdminHistoryView.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </center>
+</BorderPane>
+
