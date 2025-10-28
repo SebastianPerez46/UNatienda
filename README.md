@@ -1,33 +1,28 @@
-# UNatienda 🛒 - Simulación de Tienda con JavaFX
+# UNatienda  Simulación de Tienda con JavaFX
 
-## 🌟 Descripción General
+## Descripción General
 
-**UNatienda** es una aplicación de escritorio desarrollada en **Java** que simula las operaciones básicas de una tienda. Permite la gestión completa de productos y pedidos por parte de un administrador, y la realización de compras por parte de los clientes.
+UNatienda es una aplicación de escritorio desarrollada en Java que simula las operaciones básicas de una tienda. Permite la gestión completa de productos y pedidos por parte de un administrador, y la realización de compras por parte de los clientes.
 
-La interfaz gráfica utiliza **JavaFX**, implementando un estilo moderno con **efectos de neón** sobre fondos oscuros. El proyecto fue desarrollado como una práctica avanzada, utilizando **Maven** para la gestión de dependencias y **NetBeans** como IDE principal.
+La interfaz gráfica utiliza JavaFX, implementando un estilo moderno con efectos de neón sobre fondos oscuros. El proyecto fue desarrollado como una práctica avanzada, utilizando Maven para la gestión de dependencias y NetBeans como IDE principal.
 
----
+##  Características Principales
 
-## ✨ Características Principales
+### Roles
+Roles Separados: Funcionalidades para Administradores y Clientes.
 
-### 💻 Interfaz y Roles
-* **Estilo Moderno:** Interfaz de usuario con efectos de neón y fondos oscuros.
-* **Roles Separados:** Funcionalidades para Administradores y Clientes.
+### Flujo de Administrador
+Gestión de Productos: Añadir, ver y eliminar productos (con actualización de stock en tiempo real).
+Gestión de Pedidos: Cola de prioridad que separa pedidos VIP y Normal.
+Historial de Ventas: Registro de todos los pedidos procesados.
 
-### ⚙️ Flujo de Administrador
-* **Gestión de Productos:** Añadir, ver y eliminar productos (con actualización de stock en tiempo real).
-* **Gestión de Pedidos:** Cola de prioridad que separa pedidos **VIP** y **Normal**.
-* **Historial de Ventas:** Registro de todos los pedidos procesados.
+###  Flujo de Cliente
+Inicio de Sesión: Acceso simple con opción de estatus VIP (para prioridad en la cola).
+Carrito de Compras: Añadir/quitar productos, resumen de pedido y total.
+Control de Stock: El inventario se reduce al añadir y se devuelve al cancelar.
+Finalizar/Cancelar Pedido: Envío a la cola de procesamiento o vaciado del carrito.
 
-### 🛍️ Flujo de Cliente
-* **Inicio de Sesión:** Acceso simple con opción de estatus **VIP** (para prioridad en la cola).
-* **Carrito de Compras:** Añadir/quitar productos, resumen de pedido y total.
-* **Control de Stock:** El inventario se reduce al añadir y se devuelve al cancelar.
-* **Finalizar/Cancelar Pedido:** Envío a la cola de procesamiento o vaciado del carrito.
-
----
-
-## 📋 Requisitos del Sistema y JavaFX
+##  Requisitos del Sistema y JavaFX
 
 Debido a que JavaFX es un módulo externo en las versiones recientes de Java, es necesario contar con un JDK moderno y, opcionalmente, el SDK de JavaFX para el desarrollo en IDEs.
 
@@ -38,36 +33,28 @@ ______________________________
 | JavaFX SDK | 21 |
 | IDE | Apache NetBeans 12+ |
 
-### 🚨 Instalación de JavaFX (Si no usa Maven)
-
-Si el proyecto no fuera a ser ejecutado a través de Maven (lo cual simplifica el proceso), se requeriría descargar el **SDK de JavaFX** desde **GluonHQ** y configurar manualmente las rutas de los módulos en la máquina virtual de Java (VM Options) durante la ejecución.
-
-**¡Buena noticia!** Dado que el proyecto usa **Maven**, el proceso se simplifica drásticamente: Maven se encarga de descargar las librerías necesarias de JavaFX (especificadas en `pom.xml`) al construir el proyecto.
-
----
-
-## ⚙ Configuración e Instalación
+##  Configuración e Instalación
 
 ### 1. Obtener el Código
 
-Dezcarga el codigo fuente e importalo a netbeans como zip, o tambien se puede descomprimir desde antes e importar la carpeta descomprimida.
+Descarga el código fuente e importalo a netbeans como zip, o también se puede descomprimir desde antes e importar la carpeta descomprimida.
 
 ### 2. Abrir y Configurar Dependencias (NetBeans / Maven)
 
-1.  Abre **NetBeans IDE (El proyecto se desarrollo en la vercion 25 asi que seria lo mas optimo)**.
-2.  **Descarga Automática:** NetBeans/Maven detectará el `pom.xml` y debe comenzar a descargar las librerías necesarias de JavaFX automáticamente.
-4.  Si la descarga no inicia, haz clic derecho en el proyecto (en la ventana Projects) y selecciona **`Build with Dependencies`** para forzar la descarga de los módulos de JavaFX.
+1.  Abre NetBeans IDE (El proyecto se desarrolló en la versión 25 asi que seria lo mas optimo).
+2. Descarga Automática: NetBeans/Maven detectará el pom.xml y debe comenzar a descargar las librerías necesarias de JavaFX automáticamente.
+4.  Si la descarga no inicia, haz clic derecho en el proyecto (en la ventana Projects) y selecciona Build with Dependencies para forzar la descarga de los módulos de JavaFX.
 
 ---
 
-## ▶ Cómo Ejecutar la Aplicación
+##  Cómo Ejecutar la Aplicación
 
 ### 1. Desde NetBeans IDE (Recomendado)
 1.  Ve a Source Packages
-2.  Selecciona el pauete "com.mycompany.unatienda".
+2.  Selecciona el paquete "com.mycompany.unatienda".
 3.  Da clic derecho en la clase App.java y ve a run Maven.
-4.  Dentro de run Maven selecciona other goals y en el menu que se abre escribe "javafx:run" en goals.
-5.  Dale ok y el programa se ejecutara.
+4.  Dentro de run Maven selecciona othergoals y en el menu que se abre escribe "javafx:run" en goals.
+5.  Dale ok y el programa se ejecutará.
 
 
 Guía de Uso Rápida
@@ -84,4 +71,3 @@ Acceso: Ingresa tu nombre y marca VIP si corresponde.
 Menú: Usa el botón "Añadir" en la tabla para agregar productos al Carrito.
 
 Finalizar Pedido: Envía tu orden a la cola de procesamiento.
-
