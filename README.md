@@ -85,19 +85,3 @@ Menú: Usa el botón "Añadir" en la tabla para agregar productos al Carrito.
 
 Finalizar Pedido: Envía tu orden a la cola de procesamiento.
 
-Estructura del proyecto:
-
-UNatienda/
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   └── com/mycompany/unatienda/  # Código fuente Java (.java)
-│   │   │       ├── App.java              # Punto de entrada principal (lanza JavaFX)
-│   │   │       ├── GestorTienda.java     # Lógica central (Singleton)
-│   │   │       └── controllers/          # Controladores de las vistas
-│   │   ├── resources/
-│   │   │   └── com/mycompany/unatienda/  # Recursos (FXML, CSS, etc.)
-│   │   │       ├── *.fxml                # Archivos de diseño de interfaz (JavaFX)
-│   │   │       └── style.css             # Hoja de estilos principal
-├── pom.xml                               # Archivo de configuración de Maven (¡Define JavaFX!)
-└── README.md                             # Este archivo
